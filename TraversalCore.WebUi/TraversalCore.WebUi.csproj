@@ -20,8 +20,4 @@
     <ProjectReference Include="..\TraversalCore.BusinessLayer\TraversalCore.BusinessLayer.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ViewComponents\DefaultComponents\" />
-  </ItemGroup>
-
 </Project>
