@@ -7,16 +7,15 @@ using System.Threading.Tasks;
 
 namespace TraversalCore.EntityLayer.Concrete
 {
-    public class Destination
+    public class Guide
     {
         [Key]
-        public int DestinationId { get; set; }
-        public string City { get; set; }
-        public string DayNight { get; set; }
-        public string Price { get; set; }
+        public int GuideId { get; set; }
+        public string Name { get; set; }
         public string ImageUrl { get; set; }
         public string Description { get; set; }
-        public int Capacity { get; set; }
+        public string InstagramUrl { get; set; }
+        public string TwitterUrl { get; set; }
         public bool Status { get; set; }
     }
 }
