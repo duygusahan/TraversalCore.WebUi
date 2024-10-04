@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TraversalCore.DataAccessLayer.Context;
 
@@ -11,9 +12,10 @@ using TraversalCore.DataAccessLayer.Context;
 namespace TraversalCore.DataAccessLayer.Migrations
 {
     [DbContext(typeof(TraversalContext))]
-    partial class TraversalContextModelSnapshot : ModelSnapshot
+    [Migration("20241004091441_mig4")]
+    partial class mig4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -208,14 +210,6 @@ namespace TraversalCore.DataAccessLayer.Migrations
 
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
-
-                    b.Property<string>("Title1")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title2")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("DestinationId");
 

@@ -18,5 +18,13 @@ namespace TraversalCore.EntityLayer.Concrete
         public string Description { get; set; }
         public int Capacity { get; set; }
         public bool Status { get; set; }
+        public string CoverImageUrl { get; set; }
+        public string MainDetails { get; set; }
+        public string Details1 { get; set; }
+        public string Details2 { get; set; }
+        public string Title1 { get; set; }
+        public string Title2 { get; set; }
+        public string Image2 { get; set; }
+        public List<Comment> Comments { get; set; }
     }
 }

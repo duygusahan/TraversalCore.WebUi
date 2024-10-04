@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TraversalCore.DataAccessLayer.Context;
 
@@ -11,9 +12,10 @@ using TraversalCore.DataAccessLayer.Context;
 namespace TraversalCore.DataAccessLayer.Migrations
 {
     [DbContext(typeof(TraversalContext))]
-    partial class TraversalContextModelSnapshot : ModelSnapshot
+    [Migration("20241004074540_mig3")]
+    partial class mig3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -198,24 +200,12 @@ namespace TraversalCore.DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MainDetails")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Price")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
-
-                    b.Property<string>("Title1")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title2")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("DestinationId");
 
