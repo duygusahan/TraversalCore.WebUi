@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using TraversalCore.DataAccessLayer.Abstract;
@@ -32,6 +33,12 @@ namespace TraversalCore.DataAccessLayer.Repositories
         public List<T> GetListAll()
         {
            return _context.Set<T>().ToList();
+        }
+
+        public List<T> GetListByFilter(Expression<Func<T, bool>> filter)
+        {
+          var value= _context.Set<T>().Where(filter).ToList();
+            return value;
         }
 
         public void Insert(T entity)

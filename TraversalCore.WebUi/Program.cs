@@ -23,6 +23,9 @@ builder.Services.AddScoped<ISubAboutService, SubAboutManager>();
 builder.Services.AddScoped<ITestimonialDal , EfTestimonialDal>();
 builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
 
+builder.Services.AddScoped<ICommentDal , EfCommentDal>();
+builder.Services.AddScoped<ICommentService , CommentManager>();
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

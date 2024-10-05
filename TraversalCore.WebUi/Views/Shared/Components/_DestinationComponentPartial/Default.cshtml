@@ -11,11 +11,15 @@
                         <div class="column">
                             <a href="/Destination/DestinationDetails/@item.DestinationId"><img src="@item.ImageUrl" alt="" class="img-fluid" style="width:400px ; height:400px"></a>
                             <div class="info">
-                                <h4><a href="blog-single.html">@item.Description</a></h4>
+                                <h4><a href="blog-single.html">@item.TourName</a></h4>
                                 <p>@item.DayNight</p>
                                 <div class="dst-btm">
                                     <h6 class="">Başlayan Fiyatlarla</h6>
                                     <span>@item.Price</span>
+                                </div>
+                                <div class="dst-btm">
+                                    <h6 class="">Şehirler</h6>
+                                    <span>@item.Description</span>
                                 </div>
                             </div>
                         </div>

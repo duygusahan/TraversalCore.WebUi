@@ -12,6 +12,7 @@ namespace TraversalCore.EntityLayer.Concrete
         [Key]
         public int DestinationId { get; set; }
         public string City { get; set; }
+        public string TourName { get; set; }
         public string DayNight { get; set; }
         public string Price { get; set; }
         public string ImageUrl { get; set; }

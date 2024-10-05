@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Text;
+using System.Threading.Tasks;
+using TraversalCore.BusinessLayer.Abstract;
+using TraversalCore.DataAccessLayer.Abstract;
+using TraversalCore.EntityLayer.Concrete;
+
+namespace TraversalCore.BusinessLayer.Concrete
+{
+    public class CommentManager : ICommentService
+    {
+        private readonly ICommentDal _commentDal;
+
+        public CommentManager(ICommentDal commentDal)
+        {
+            _commentDal = commentDal;
+        }
+
+        public void TDelete(int id)
+        {
+            _commentDal.Delete(id);
+        }
+
+        public Comment TGetById(int id)
+        {
+           return _commentDal.GetById(id);
+        }
+
+       
+
+        public List<Comment> TGetListAll()
+        {
+            return _commentDal.GetListAll();
+        }
+
+        
+
+        public void TInsert(Comment entity)
+        {
+            _commentDal.Insert(entity);
+        }
+        public List<Comment> TGetDestinationById(int id)
+        {
+            return _commentDal.GetListByFilter(x => x.DestinationId == id);
+        }
+
+        public void TUpdate(Comment entity)
+        {
+            _commentDal.Update(entity);
+        }
+    }
+}
