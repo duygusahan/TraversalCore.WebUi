@@ -3,11 +3,13 @@ using TraversalCore.BusinessLayer.Concrete;
 using TraversalCore.DataAccessLayer.Abstract;
 using TraversalCore.DataAccessLayer.Context;
 using TraversalCore.DataAccessLayer.EntityFramework;
+using TraversalCore.EntityLayer.Concrete;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<TraversalContext>();
+builder.Services.AddIdentity<AppUser , AppRole>().AddEntityFrameworkStores<TraversalContext>();
 builder.Services.AddScoped<IDestinationService , DestinationManager>(); 
 builder.Services.AddScoped<IDestinationDal , EfDestinationDal>(); 
 

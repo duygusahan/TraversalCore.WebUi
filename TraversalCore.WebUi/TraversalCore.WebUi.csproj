@@ -7,8 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\login-form-02\.DS_Store" />
+    <None Include="wwwroot\login-form-02\css\.DS_Store" />
+    <None Include="wwwroot\login-form-02\fonts\.DS_Store" />
+    <None Include="wwwroot\login-form-02\images\.DS_Store" />
+    <None Include="wwwroot\login-form-02\scss\.DS_Store" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.10.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.33" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.33">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
